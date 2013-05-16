@@ -1,0 +1,69 @@
+*{padding:0px;margin:0px;}
+body{font-size:0.75em;font-family:verdana;background-color:#000;}
+/*
+body#bg{
+    background: url('/el/g/bg.gif') no-repeat center center fixed;
+    / * css3 * /
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+
+    / * css2, @see: http://webdesignerwall.com/tutorials/how-to-css-large-background * /
+    width: 100%;
+    display: table;
+
+    padding: 0;
+    margin: 0;
+}
+*/
+#vrsek,#foot,.btn-slide{background:url("/el/g/m.gif") no-repeat scroll center 0 transparent;}
+a{color:#c1ad26;}
+a:hover{color:#e8d342;}
+a:visited{color:#BA965B;}
+img{border:0px;}
+.center{text-align:center;}
+.right{text-align:right;}
+.hr{width:98%;border-bottom:solid 2px red;margin-left:auto;margin-right:auto;padding-top:6px;margin-bottom:1em;}
+#obal{background-color:#838281;border-right:1px solid #716f6e;border-left:2px solid #1f1b17;width:990px;margin:0 auto;position:relative;}
+#vrsek{position:relative;top:0;left:0;width:990px;height:144px;background-position:center 0;background-color:#838281;}
+#vrsek #rotujici23{position:absolute;bottom:0;left:334px;width:91px;height:91px;overflow:hidden;}
+#main{background-color:#727272;border:solid #868584;border-width:0 1px 0 0;width:732px;float:left;position:relative;}
+#lista{background-color:#c2c1c1;border:solid #999898;border-width:0px 1px 1px;width:721px;padding:5px;position:absolute;left:-2px;top:0;}
+#lista #player-link-r{display:none;}
+#lista a{color:#9e2b32;}
+#cont{width:702px;height:auto;padding:40px 10px;min-height:189px;text-shadow:#000 2px 2px;color:pink;}
+#cont a{text-shadow:none;}
+#cont pre{font-size:1.25em;}
+#cont #text p{text-indent:1.25em;padding-top:1em;text-align:justify;}
+#cont #text p.first{text-indent:1.25em;padding-bottom:1em;text-align:justify;}
+#cont #text p.thx{text-align:right;padding-right:2em;}
+#cont #text blockquote{border:dashed 3px #00bbcc;background-color:#ccbbaa;padding:0.5em;text-align:center;}
+#right{width:247px;padding:15px 5px;float:right;text-align:center;}
+#right #clustrmaps{text-align:center;padding-left:14px;}
+#right #fbook_search {width:100%;height:103px;}
+#right #fbook_search #facebook {float:left;width:25%;text-align:center;}
+#right #fbook_search #search   {float:left;width:75%;}
+#right #fbook_search #search #search-text {width:95%;height:55px;font-size:40px;}
+#right #fbook_search #search #submit {font-size:17px;width:95%;text-align:center;font-weight:bold;background-color:lightgreen;color:gray;}
+#right #fbook_search #search #submit:hover {background-color:green;color:silver;}
+#right #news_last{width: 20em; height: 10em; background-color: lightgreen; border: solid 2px green; font-size: 12px; padding: 2px;overflow:auto;}
+#right #news_last iframe{background-color: lightgreen; font-size: 12px;}
+#right #news_main{width: 20em; height: 16em; background-color: magenta; border: solid 2px navy; font-size: 12px; padding: 3px;}
+#right #news_main iframe{background-color: magenta; font-size: 12px;}
+#right #donate {width:20em; background-color:#DFBFFF; border:solid 2px #8000FF; padding:2px; font-size:12px;}
+#right #donate #amount {width:100%;text-align:center;}
+#right #donate #eur_amount {font-size:16px;}
+#right #donate #eur {width:3em;font-size:18px;padding-left:0.25em;}
+#right #donate #eur_eur {font-size:20px;padding-left:0.5em;}
+#right #donate #submit {width:100%;text-align:center;}
+#right *{text-align:left;margin-bottom:10px;}
+#right cse-search-box{text-align:center;}
+#foot{background-position:-2px -145px;clear:both;height:143px;position:relative;background-color:#716F6E;}
+#foot #plynmaska{position:absolute;right:4px;bottom:1px;width:97px;height:131px;overflow:hidden;}
+#foot #plynmaska1anim{position:absolute;right:6px;bottom:1px;width:97px;height:131px;overflow:hidden;background-color:#818380;visibility:hidden;}
+#copyleft{text-align:center;color:silver;}
+#search-text{border:1px solid rgb(126, 157, 185);padding:2px;background:url("http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif") no-repeat scroll left center rgb(255, 255, 255);width:180px;}
+#nenalezen{margin:2.5em 4px 2em;padding:10px 8px 8px;border:dotted 2px black;text-align:center;}
+#nenalezen #uvnitr{width:421px;margin:0 auto;}
+#nenalezen #uvnitr .velky{font-size:200%;}

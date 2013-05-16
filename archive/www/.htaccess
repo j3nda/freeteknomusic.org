@@ -1,0 +1,57 @@
+# public DOCUMENT_ROOT
+#
+# 110825-2014jsm - revize: ~fv.cz [dan]
+# 110206-2016jsm - this option(s) must be set for correct limited access through:
+# 110206-2016jsm -   o) http[s]://(d|dev|devel).fv.cz/<repo-name>/*
+# 110206-2016jsm -   o) http[s]://<repo-name>.(d|dev|devel).fv.cz/*
+#
+order deny,allow
+allow from all
+
+
+
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^archiv\.freeteknomusic\..+$
+RewriteRule ^(.*)$ http://archive.freeteknomusic.org/$1     [L,R=301,QSA]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+\/)playlist(\.m3u|\.sort|\.rsort|\.asort|\.rand|\.pls)?$ /playlist.php?dir=$1&opt=$2 [L,QSA]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^p\.xspf\/?(.*)$        /p.php?dir=$1 [L,QSA]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^cgi.ads/(.*)$          /.ads/index.php?uidr=$1 [L,QSA]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$                  /index.php?id=$1 [L,QSA]
+
+
+RewriteCond %{REQUEST_FILENAME}     !-d
+RewriteCond %{REQUEST_FILENAME}     !-f
+RewriteCond %{ENV:REDIRECT_STATUS}  !=503
+RewriteCond %{REQUEST_URI}          \.(mp3|ogg|wma|avi|mpe?g|wmv)$
+RewriteRule (.+)                    http://freeteknomusic.org/mp3/$1 [R=307,L]
+
+
+
+
+#
+# deny for an ip (for a while)
+#
+ErrorDocument 503 /503.html
+
+
+#RewriteCond %{REMOTE_ADDR} ^84\.242\.106\.113$
+#RewriteCond %{ENV:REDIRECT_STATUS} !=503
+#RewriteCond %{REQUEST_URI} \.(mp3|ogg|wma|avi|mpe?g|wmv)$
+#RewriteRule .* - [R=503,L]
